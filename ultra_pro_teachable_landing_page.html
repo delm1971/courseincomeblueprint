@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turn Your Knowledge Into an Online Course Business | Course Income Blueprint</title>
+  <meta name="description" content="Build and sell your first online course, coaching offer, or digital product with Teachable. Start turning your skills into an online business today." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2e;
+      --card: #101f35;
+      --card-2: #132642;
+      --text: #f7fbff;
+      --muted: #b9c7d8;
+      --accent: #39d98a;
+      --accent-2: #7c5cff;
+      --warning: #ffd166;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 22px 70px rgba(0,0,0,0.35);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124, 92, 255, 0.28), transparent 32%),
+        radial-gradient(circle at top right, rgba(57, 217, 138, 0.22), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 17, 31, 0.84);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 30px rgba(57, 217, 138, 0.22);
+      font-weight: 900;
+      color: #06101f;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .navlinks a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), #9df7c5);
+      color: #06101f;
+      font-weight: 800;
+      border: 0;
+      box-shadow: 0 14px 34px rgba(57, 217, 138, 0.28);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(57, 217, 138, 0.38);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    .hero {
+      padding: 92px 0 70px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(7, 17, 31, 0.97) 0%, rgba(7, 17, 31, 0.88) 44%, rgba(7, 17, 31, 0.35) 100%),
+        url('images/teachable-quote.png') right center / contain no-repeat;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 18% 20%, rgba(57, 217, 138, 0.16), transparent 32%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
+      align-items: center;
+      min-height: 650px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(57, 217, 138, 0.1);
+      color: #bafbd8;
+      border: 1px solid rgba(57, 217, 138, 0.28);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff, #bafbd8 52%, #c8bdff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 28px 0 18px;
+    }
+
+    .microcopy {
+      color: #9fb0c7;
+      font-size: 13px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px -120px auto auto;
+      width: 220px;
+      height: 220px;
+      background: rgba(57, 217, 138, 0.20);
+      filter: blur(40px);
+      border-radius: 50%;
+    }
+
+    .dashboard {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-proof {
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.82)),
+        url('images/teachable-quote.png') center / cover no-repeat;
+    }
+
+    .hero-proof-logo {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      border-radius: 22px;
+      margin-bottom: auto;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    .hero-proof-copy {
+      background: rgba(7, 17, 31, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-proof-copy span {
+      color: #bafbd8;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-proof-copy strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 10px 0;
+    }
+
+    .hero-proof-copy p {
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.18);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(57, 217, 138, 0.13);
+      border: 1px solid rgba(57, 217, 138, 0.24);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+
+    .checklist {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--muted);
+    }
+
+    .check {
+      flex: 0 0 24px;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #06101f;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .offer-box {
+      background:
+        linear-gradient(135deg, rgba(124, 92, 255, 0.22), rgba(57, 217, 138, 0.12)),
+        var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-box h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .offer-box p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 18px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+    }
+
+    .step-num {
+      height: 52px;
+      width: 52px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #06101f;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    .step h3 {
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .quote {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote h2 {
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .quote p {
+      color: var(--muted);
+      max-width: 780px;
+      margin: 0 auto 26px;
+      font-size: 18px;
+    }
+
+    .faq {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .final-cta {
+      padding: 82px 0;
+      background: linear-gradient(180deg, transparent, rgba(57, 217, 138, 0.08));
+    }
+
+    .footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .disclosure {
+      max-width: 760px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .split,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 54px;
+        background:
+          linear-gradient(180deg, rgba(7, 17, 31, 0.94), rgba(7, 17, 31, 0.84)),
+          url('images/teachable-quote.png') center top / cover no-repeat;
+      }
+
+      .hero-grid {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .quote {
+        padding: 30px 22px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Branding Images -->
+  <div style="text-align:center; padding:20px 0;">
+    <img src="images/logo-icon.png" alt="Logo Icon" style="max-width:100px; margin-bottom:10px;">
+    <br>
+    <img src="images/wordmark-logo.png" alt="Wordmark Logo" style="max-width:220px; margin:10px auto; display:block;">
+    <img src="images/teachable-quote.png" alt="Teachable Quote" style="max-width:300px; margin:10px auto; display:block;">
+  </div>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Course Income Blueprint home">
+        <span class="logo">C</span>
+        <span>Course Income Blueprint</span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#how">How It Works</a>
+        <a href="#ideas">Course Ideas</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Start Free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Creator business starter system</div>
+          <h1><span class="gradient-text">The best lessons are lived. Now turn yours into income.</span></h1>
+          <p>
+            Build and sell your first online course, coaching offer, digital download, or membership with Teachable — without needing a complicated tech stack.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Start Building with Teachable →</a>
+            <a class="btn secondary" href="#how">See How It Works</a>
+          </div>
+          <div class="microcopy">No complicated tech stack required. Start simple, launch fast, improve as you grow.</div>
+        </div>
+
+        <aside class="hero-card hero-proof" aria-label="Teachable creator visual">
+          <img src="images/logo-icon.png" alt="Teachable icon" class="hero-proof-logo">
+          <div class="hero-proof-copy">
+            <span>Creator-ready platform</span>
+            <strong>Build once. Sell online. Keep improving.</strong>
+            <p>Create your course, upload your lessons, publish your offer, and send traffic to one focused destination.</p>
+            <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Start Free with Teachable →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Most people are sitting on sellable knowledge.</h2>
+          <p>
+            The hard part is not always finding the idea. The hard part is packaging it into something people can understand, buy, and use.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">💡</div>
+            <h3>Find your teachable skill</h3>
+            <p>Start with what people already ask you for help with: tech, fitness, beauty, business, productivity, career skills, hobbies, or coaching.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📦</div>
+            <h3>Package the outcome</h3>
+            <p>Turn your knowledge into lessons, checklists, templates, training videos, downloads, or a step-by-step program.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚀</div>
+            <h3>Launch online</h3>
+            <p>Use Teachable to create your product experience, publish your offer, and send visitors to a clean checkout flow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container split">
+        <div class="panel">
+          <h2>Your simple creator launch plan</h2>
+          <p>
+            You do not need a giant audience or a complex website to get started. Build a clear offer, publish it, and send traffic to one focused destination.
+          </p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Choose one specific problem your audience wants solved.</span></li>
+            <li><span class="check">✓</span><span>Create a short course, coaching offer, download, or membership around that outcome.</span></li>
+            <li><span class="check">✓</span><span>Launch with Teachable and send traffic from social, search, email, native ads, or content.</span></li>
+          </ul>
+        </div>
+
+        <div class="offer-box">
+          <h3>Build your first digital product with Teachable</h3>
+          <p>
+            Teachable gives creators a platform to build and sell online courses, coaching, digital downloads, and memberships from one place.
+          </p>
+          <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Start with Teachable →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>How to go from idea to launch</h2>
+          <p>Keep your first offer simple. You can always expand later.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Pick one audience</h3>
+              <p>Choose a group you understand: beginners, job seekers, small business owners, creators, parents, students, professionals, or hobbyists.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Promise one clear result</h3>
+              <p>Examples: launch a first course, improve a resume, learn Excel, start meal prepping, build a fitness routine, or master a software tool.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Publish your offer</h3>
+              <p>Upload your lessons, add your sales page, set your pricing, and use Teachable to start selling your knowledge online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ideas">
+      <div class="container">
+        <div class="section-title">
+          <h2>Profitable course ideas you can start with</h2>
+          <p>Use these as inspiration and narrow them down to a specific audience and result.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">💻</div>
+            <h3>Tech Skills</h3>
+            <p>Help desk basics, cybersecurity foundations, Microsoft 365, Excel, AI tools, resume prep, interview prep, or beginner IT training.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📈</div>
+            <h3>Business Skills</h3>
+            <p>Freelancing, consulting, sales, social media, content creation, email marketing, bookkeeping, productivity, or small business systems.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎯</div>
+            <h3>Personal Growth</h3>
+            <p>Fitness routines, nutrition basics, confidence, organization, study skills, language learning, parenting systems, or hobby training.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container quote">
+        <h2>The fastest way to start is to stop overbuilding.</h2>
+        <p>
+          Pick one skill. Create one outcome. Publish one offer. Then improve it using real feedback from real people.
+        </p>
+        <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Create Your Teachable Account →</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently asked questions</h2>
+          <p>Common questions before starting your first online course or digital product.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Do I need to be an expert?</summary>
+            <p>No. You need to be able to help a specific person get a specific result. Many successful offers teach beginner-friendly skills in a clear, simple way.</p>
+          </details>
+          <details>
+            <summary>What can I sell with Teachable?</summary>
+            <p>You can use Teachable to sell online courses, coaching, digital downloads, and membership-style offers.</p>
+          </details>
+          <details>
+            <summary>Do I need a big audience?</summary>
+            <p>No. A focused offer can start with a small audience, content traffic, email, ads, partnerships, or direct outreach.</p>
+          </details>
+          <details>
+            <summary>What should my first course be about?</summary>
+            <p>Start with a problem you have already solved for yourself or others. The best first offer is specific, practical, and easy to understand.</p>
+          </details>
+          <details>
+            <summary>How fast can I launch?</summary>
+            <p>You can start simple with a small course, template pack, coaching offer, or digital download, then expand as you learn what your audience wants.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container quote">
+        <h2>Ready to turn your skill into a digital product?</h2>
+        <p>
+          Start building your course, coaching offer, download, or membership with Teachable today.
+        </p>
+        <a class="btn" href="https://partnerstack.teachable.com/tf4reynakymn" target="_blank" rel="nofollow sponsored noopener">Start Building with Teachable →</a>
+      </div>
+    </section>
+  </main>
+
+    <!-- Bottom Banner Image -->
+  <div style="text-align:center; padding:40px 0;">
+    <img src="file_00000000b9a471fd8ba57eb5f209a035" alt="Banner" style="max-width:600px; width:100%; border-radius:20px;">
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>© 2026 Course Income Blueprint. All rights reserved.</div>
+      <div class="disclosure">
+        Affiliate Disclosure: This page contains affiliate links. If you click and purchase through these links, we may earn a commission at no additional cost to you. Results are not guaranteed and depend on your effort, offer, audience, traffic, and market demand.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
